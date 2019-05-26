@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<changeSet author="pedro" id="1558830018343-5">
+		<createTable tableName="T_EQUIPMENT">
+			<column name="ID" type="BIGINT(19)">
+				<constraints nullable="false" />
+			</column>
+			<column name="DATE_DELETE" type="TIMESTAMP" />
+			<column name="DATE_SAVE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="DATE_UPDATE" type="TIMESTAMP" />
+			<column name="NAME" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+			<column name="TYPE_EQUIPMENT" type="INT(10)">
+				<constraints nullable="false" />
+			</column>
+			<column name="ID_REBEL" type="BIGINT(19)" />
+		</createTable>
+	</changeSet>
+	<changeSet author="pedro" id="1558830018343-6">
+		<createIndex
+			indexName="FK9SU8UIVNL38NN3NMFSTPB4QGM_INDEX_A"
+			tableName="T_EQUIPMENT">
+			<column name="ID_REBEL" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="pedro" id="1558830018343-7">
+		<createSequence sequenceName="SEQ_EQUIPMENT" />
+	</changeSet>
+	<changeSet author="pedro (generated)" id="1558830018343-8">
+		<addPrimaryKey columnNames="ID"
+			constraintName="CONSTRAINT_6" tableName="T_EQUIPMENT" />
+	</changeSet>
+</databaseChangeLog>

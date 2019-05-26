@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="funcionarios" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="traitorsPercentage" class="java.lang.Double"/>
+	<parameter name="rebelsPercentage" class="java.lang.Double"/>
+	<parameter name="avgRessourceTypeFood" class="java.lang.Double"/>
+	<parameter name="avgRessourceTypeWater" class="java.lang.Double"/>
+	<parameter name="avgRessourceTypeAmmunition" class="java.lang.Double"/>
+	<parameter name="avgRessourceTypeWeapon" class="java.lang.Double"/>
+	<parameter name="totalPointsResource" class="java.lang.Double"/>
+	<parameter name="totalPointsResourceLost" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<title>
+		<band height="127" splitType="Stretch">
+			<staticText>
+				<reportElement x="415" y="10" width="50" height="20" uuid="0f86baff-6386-4f3f-b3fe-2388707babe8"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<textField pattern="M/d/yy">
+				<reportElement key="" x="465" y="10" width="84" height="20" uuid="bb10dbe1-0a4f-4722-9953-c163b63cf979"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="65" height="60" uuid="94883631-a913-43e2-b182-ab8d77d0181e"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="95" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rebel Alliance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="25" width="305" height="25" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
+				<text><![CDATA["We need a flag to rally behind. A symbol. A symbol of hope." - Leia Organa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="555" height="25" uuid="4bd043c8-f2c8-4ee2-9244-63962ad94c1a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Active Rebels]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#E3E3E3" uuid="99d9ebf6-e7bd-49a1-b6fa-7e40d2163a22"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20" uuid="90a545d0-d648-4f94-a04f-6d3ba3c08cf8"/>
+				<box leftPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="355" y="20" width="100" height="30" uuid="e7903491-6b1c-4671-9d79-354b138fd104"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="455" y="20" width="100" height="30" uuid="421b7256-9501-4e55-887b-c0266d038d2f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="115">
+			<textField>
+				<reportElement x="0" y="0" width="210" height="20" uuid="d4e43315-af99-4dd6-b97b-5d4631662755"/>
+				<textFieldExpression><![CDATA["Percentage of traitors:" + $P{traitorsPercentage}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="21" width="210" height="20" uuid="78e18049-2f97-4620-9e1f-18f742be232a"/>
+				<textFieldExpression><![CDATA["Percentage of rebels:"  +  $P{rebelsPercentage}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="1" width="180" height="20" uuid="08d131cb-b649-40ec-9786-f2571b68e392"/>
+				<textFieldExpression><![CDATA["Total points: " +  $P{totalPointsResource}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="22" width="180" height="20" uuid="d4421f9e-dc11-49c8-b7ca-1d39921730af"/>
+				<textFieldExpression><![CDATA["Points lost due to traitors: " +  $P{totalPointsResourceLost}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="280" height="12" uuid="be67fd24-4fb2-4a8d-809f-692408c0ef60"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0">
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA["Average amount of each type of resource per rebel:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="70" width="70" height="20" uuid="1c0077b8-4b53-4847-b243-c67030d70343"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="70" width="70" height="20" uuid="705d3ad8-efb5-4d8f-9d38-41be4c42f4e1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Water]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="70" width="70" height="20" uuid="ac23ca31-9c49-4f54-b3e3-6e33c97ca542"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Weapon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="70" width="70" height="20" uuid="c2a46245-189d-4abe-9909-47c8e3690c7e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ammunition]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="90" width="70" height="20" uuid="40fe93d7-a759-4939-be22-79eed6eb9774"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$P{avgRessourceTypeFood}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="90" width="70" height="20" uuid="59991bfd-24c4-4d0b-b040-4875210bfda5"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$P{avgRessourceTypeWeapon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="90" width="70" height="20" uuid="652c2051-1b4e-4abb-ac66-eb4c6776bed5"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$P{avgRessourceTypeAmmunition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="90" width="70" height="20" uuid="1244e4d6-490a-44d7-97e8-0314a178b4e8"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$P{avgRessourceTypeWater}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

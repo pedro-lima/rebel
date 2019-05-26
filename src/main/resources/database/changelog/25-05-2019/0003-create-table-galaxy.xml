@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<changeSet author="pedro" id="1558830018343-9">
+		<createTable tableName="T_GALAXY">
+			<column name="ID" type="BIGINT(19)">
+				<constraints nullable="false" />
+			</column>
+			<column name="DATE_DELETE" type="TIMESTAMP" />
+			<column name="DATE_SAVE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="DATE_UPDATE" type="TIMESTAMP" />
+			<column name="NAME" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="pedro" id="1558830018343-10">
+		<createSequence sequenceName="SEQ_GALAXY" />
+	</changeSet>
+	<changeSet author="pedro (generated)" id="1558830018343-11">
+		<addPrimaryKey columnNames="ID"
+			constraintName="CONSTRAINT_3" tableName="T_GALAXY" />
+	</changeSet>
+</databaseChangeLog>

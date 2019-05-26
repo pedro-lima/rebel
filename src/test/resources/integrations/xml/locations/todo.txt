@@ -1,0 +1,2 @@
+Criar os arquivos xml que contem os dados que serão usados nos textes de integração
+durante a criação de objetos de teste 

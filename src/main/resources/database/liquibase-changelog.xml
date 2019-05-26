@@ -1,0 +1,33 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<include
+		file="changelog/25-05-2019/0001-create-table-betrayal.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0002-create-table-equipment.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0003-create-table-galaxy.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0004-create-table-location.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0005-create-table-rebel.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0006-create-fk-equipament-rebel.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0007-create-fk-location-galaxy.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0008-create-fk-rebel-location.xml"
+		relativeToChangelogFile="true" />
+	<include
+		file="changelog/25-05-2019/0009-create-fk-rebel-betrayal.xml"
+		relativeToChangelogFile="true" />
+</databaseChangeLog>
